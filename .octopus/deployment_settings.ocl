@@ -1,4 +1,4 @@
-release_notes_template = "Test"
+release_notes_template = "T"
 
 connectivity_policy {
     allow_deployments_to_no_targets = true
