@@ -11,3 +11,17 @@ step "run-a-script" {
         }
     }
 }
+
+step "branch-step" {
+    name = "Branch Step"
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = "echo \"Test\""
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "PowerShell"
+        }
+    }
+}
