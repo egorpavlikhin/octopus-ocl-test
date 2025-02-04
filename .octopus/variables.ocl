@@ -1,11 +1,3 @@
-variable "awsAcc" {
-    type = "AmazonWebServicesAccount"
-
-    value "aws-acc" {
-        environment = ["dev"]
-    }
-}
-
 variable "testVar" {
     value "test" {
         environment = ["dev"]
@@ -14,5 +6,13 @@ variable "testVar" {
     value "Scoped to Parent" {
         description = ""
         environment = ["parent-env"]
+    }
+}
+
+variable "awsAcc" {
+    type = "AmazonWebServicesAccount"
+
+    value "aws-acc" {
+        environment = ["dev", "parent-env"]
     }
 }
