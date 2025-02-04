@@ -1,0 +1,18 @@
+variable "awsAcc" {
+    type = "AmazonWebServicesAccount"
+
+    value "aws-acc" {
+        environment = ["dev"]
+    }
+}
+
+variable "testVar" {
+    value "test" {
+        environment = ["dev"]
+    }
+
+    value "Scoped to Parent" {
+        description = ""
+        environment = ["parent-env"]
+    }
+}
