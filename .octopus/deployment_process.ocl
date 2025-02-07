@@ -33,6 +33,7 @@ step "run-an-aws-cli-script" {
             Octopus.Action.Script.ScriptBody = <<-EOT
                 Write-Host $awsAcc
                 Write-Host $OctopusParameters["Octopus.Action.Amazon.AccessKey"]
+                Write-Host $testVar
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
