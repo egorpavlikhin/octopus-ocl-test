@@ -25,6 +25,7 @@ step "run-an-aws-cli-script" {
 
     action {
         action_type = "Octopus.AwsRunScript"
+        is_disabled = true
         properties = {
             Octopus.Action.Aws.AssumeRole = "False"
             Octopus.Action.Aws.Region = "us-west-1"
