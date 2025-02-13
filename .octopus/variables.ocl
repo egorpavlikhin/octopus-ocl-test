@@ -16,3 +16,11 @@ variable "awsAcc" {
         environment = ["dev", "parent-env"]
     }
 }
+
+variable "cert" {
+    type = "Certificate"
+
+    value "Certificates-12" {
+        environment = ["parent-env"]
+    }
+}
